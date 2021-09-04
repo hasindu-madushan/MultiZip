@@ -17,5 +17,5 @@ Usage of Multizip is very easy
 	`mz = multizip.Multizip("my zip file.zip")`
 
 * step 3: extract   
-	`mz.etract("a file inside the zip.txt")`
+	`mz.extract("a file inside the zip.txt")`
 

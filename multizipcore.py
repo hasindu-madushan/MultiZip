@@ -56,9 +56,7 @@ class _Disk:
             self.size = len(self.content)
             
 
-    def load( self, disk_id ):  
-        
-        
+    def load( self, disk_id ):        
         if disk_id == _Disk.main_disk_id:
             return _Disk.main_disk
         

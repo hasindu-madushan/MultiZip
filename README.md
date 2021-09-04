@@ -11,11 +11,11 @@ MultiZip is a module to extract zip files with multiple parts in a python code. 
 ## Usage
 Usage of Multizip is very easy
 * step 1: Import MultiZip  
-	import multizip
+	`import multizip`
 
 * step 2: create Multizip object. Give the path to your zip files as the argument.  
-	mz = multizip.Multizip("my zip file.zip")
+	`mz = multizip.Multizip("my zip file.zip")`
 
 * step 3: extract   
-	mz.etract("a file inside the zip.txt")
+	`mz.etract("a file inside the zip.txt")`
 

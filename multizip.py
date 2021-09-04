@@ -16,8 +16,7 @@ class Multizip:
         self._file_name = file_name
         self._cdhs = []
         self._lfhs = []
-  
-        
+         
         self.main_disk = core._Disk(file_name)    # load the main disk       
         offset_encd = self.main_disk.content.find(core._end_of_central_directory_header_signature)    # the offset of the encd
         
@@ -58,8 +57,7 @@ class Multizip:
             
         if decompress:
             return zlib.decompress( res, wbits=-15 )
-            
-            
+                    
         return res
             
     
@@ -71,6 +69,8 @@ class Multizip:
                 names.append(file_name)
             
         return names 
+    
+    
     def extractFile( self , file_name ):
         for cdh in self._cdhs:
             if file_name ==  cdh.file_name.split('/')[-1]:
@@ -86,6 +86,7 @@ class Multizip:
                 return 
         
         print("File not foud: " + file_name)
+        
         
     def _loadCentralDirHeaders( self ):                
         self._cdhs.append( core._CentralDirectoryHeader(self.main_disk.content, self._encd.offset_central_dir) )
